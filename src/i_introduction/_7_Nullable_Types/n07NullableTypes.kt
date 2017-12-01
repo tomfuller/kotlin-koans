@@ -26,6 +26,14 @@ fun sendMessageToClient(
         client: Client?, message: String?, mailer: Mailer
 ) {
     if (client != null && message != null && client.personalInfo != null && client.personalInfo.email != null) mailer.sendMessage(client.personalInfo.email, message)
+
+
+//    val email = client?.personalInfo?.email
+//
+//    if (email != null && message != null) {
+//
+//        mailer.sendMessage(email, message)
+//    }
 }
 
 class Client (val personalInfo: PersonalInfo?)
