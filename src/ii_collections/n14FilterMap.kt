@@ -10,9 +10,7 @@ fun example1(list: List<Int>) {
 
 fun Shop.getCitiesCustomersAreFrom(): Set<City> {
     // Return the set of cities the customers are from
-    val cities = mutableSetOf<City>()
-    customers.forEach { cities.add(it.city) }
-    return cities
+    return customers.map { it.city }.toSet()
 }
 
 fun Shop.getCustomersFrom(city: City): List<Customer> {
